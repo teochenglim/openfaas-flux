@@ -12,7 +12,7 @@ metadata:
 spec:
   releaseName: functions
   chart:
-    git: git@github.com:stefanprodan/openfaas-flux
+    git: git@github.com:teochenglim/openfaas-flux
     ref: master
     path: functions
   values:
