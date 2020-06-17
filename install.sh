@@ -10,7 +10,7 @@ if [ ! -x "$(command -v helm)" ]; then
     exit 1
 fi
 
-GH_USER=${1:-stefanprodan}
+GH_USER=${1:-teochenglim}
 GH_REPO=${2:-openfaas-flux}
 GH_BRANCH=${3:-master}
 GH_URL="git@github.com:${GH_USER}/${GH_REPO}"
@@ -40,5 +40,3 @@ helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 echo ""
 echo "Configure GitHub deploy key for $GH_URL with write access:"
 kubectl -n fluxcd logs deployment/flux | grep identity.pub | cut -d '"' -f2
-
-
